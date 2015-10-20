@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Use single quotes instead of double quotes to make it work with special-character passwords
-PASSWORD='earth terms where hurry cent exciting!'
-HOSTNAME = 'srv.dev'
+PASSWORD='XXXXXXXXXXXX'
+TLD = '.dev'
 
 # create project folder
 sudo mkdir "/var/www/html/vhosts"
@@ -24,11 +24,11 @@ sudo apt-get -y install mysql-server
 sudo apt-get install php5-mysql
 
 VHOST=$(cat <<EOF
-ServerName $HOSTNAME
+ServerName srv.$TLD
 <VirtualHost *:80>
     UseCanonicalName Off
 
-    ServerAlias *.$HOSTNAME
+    ServerAlias *.$TLD
     VirtualDocumentRoot /var/www/vhosts/%1/httpdocs
     <Directory /var/www/>
         Options FollowSymLinks
