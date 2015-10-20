@@ -12,5 +12,5 @@
 
 1. Everything in the `/vhosts` directory inside your server folder is shared with the machine's `var/www/vhosts` directory.
 2. To add a new dev site, add a folder to the `vhosts` directory. All of your public files should be added to a subdirectory called `httpdocs`
-3. Update your Windows hosts file to point `{folder}`.`{TLD}` to the server's IP. For example, if you use the default TLD of `.dev` and your dev site is in `/mysite/httpdocs` then your hosts entry will be `mysite.dev XXX.XXX.XXX.XXX`
+3. Update your Windows hosts file to point `{folder}`.`{TLD}` to the server's IP. For example, if you use the default TLD of `.dev` and your dev site is in `/mysite/httpdocs` then your hosts entry will be `XXX.XXX.XXX.XXX mysite.dev`
 *NOTE: you can use a service like Acrylic [http://mayakron.altervista.org/wikibase/show.php?id=AcrylicHome] to insert a wildcard subdomain so you only have to do this once
