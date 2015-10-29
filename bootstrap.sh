@@ -2,10 +2,10 @@
 
 # Use single quotes instead of double quotes to make it work with special-character passwords
 PASSWORD='XXXXXXXXXXXX'
-TLD = '.dev'
+TLD = 'dev'
 
 # create project folder
-sudo mkdir "/var/www/html/vhosts"
+sudo mkdir "/var/www/vhosts" -m 775
 
 # update / upgrade
 sudo apt-get update
@@ -30,7 +30,7 @@ ServerName srv.$TLD
 
     ServerAlias *.$TLD
     VirtualDocumentRoot /var/www/vhosts/%1/httpdocs
-    <Directory /var/www/>
+    <Directory /var/www/vhosts/%1>
         Options FollowSymLinks
         AllowOverride All
         Require all granted
